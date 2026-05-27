@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIRKEL KITA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <h1 class="loader-text">KIDS BERGEMBIRA</h1>
+    <div class="loading-bar">
+      <div class="loading-fill"></div>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor"></div>
+  <div class="cursor-blur"></div>
+
+  <!-- MUSIC BUTTON -->
+  <button id="music-toggle">🔊</button>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      KIDS<span>BERGEMBIRA</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="gallery.html">GALLERY</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+
+      <h1>
+        GRUP.
+        <span>SIRKEL.</span>
+        KUMPULAN.
+      </h1>
+
+      <p class="desc">
+        katanya kumpulan orang orang gembira, sedikit gila yang suka kumpul bareng dengan tawa lebar.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#about">
+            <button class="primary-btn">
+                ENTER CHAOS
+            </button>
+        </a>
+
+        <a href="gallery.html">
+            <button class="secondary-btn">
+                VIEW GALLERY
+            </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-card">
+        <img src="https://media.giphy.com/media/rFIR26sBVLJhBGTfw5/giphy.gif" alt="hero">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>NOT JUST FRIENDS.</h2>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>CHAOTIC ENERGY</h3>
+        <p>setiap malam pasti ada ide random.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>DOCUMENTED</h3>
+        <p>semua moment tersimpan jadi cerita.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>BROTHERHOOD</h3>
+        <p>datang pas susah maupun senang.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h2>SEE YOU IN THE NEXT CHAOS.</h2>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

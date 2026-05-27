@@ -1,0 +1,298 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #050505;
+  color: white;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+.cursor {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ff6b00;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-blur {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 106, 0, 0.15);
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 9998;
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.loader-text {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+.loading-bar {
+  width: 300px;
+  height: 5px;
+  background: #222;
+  margin-top: 30px;
+}
+
+.loading-fill {
+  width: 0%;
+  height: 100%;
+  background: #ff6b00;
+  animation: loading 3s ease forwards;
+}
+
+@keyframes loading {
+  100% {
+    width: 100%;
+  }
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 30px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  mix-blend-mode: difference;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #ff6b00;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-left h1 {
+  font-size: 5rem;
+  line-height: 0.9;
+  font-weight: 800;
+  letter-spacing: -4px;
+}
+
+.hero-left h1 span {
+  color: #ff6b00;
+}
+
+.tag {
+  color: #ff6b00;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-weight: 500;
+}
+
+.hero-buttons {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 18px 30px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #ff6b00;
+  color: black;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.hero-card {
+  transform: rotate(-5deg);
+  border: 2px solid #ff6b00;
+  overflow: hidden;
+}
+
+.hero-card img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+.about,
+.gallery,
+.members,
+footer {
+  padding: 150px 8%;
+}
+
+.about h2,
+.gallery h2,
+.members h2,
+footer h2 {
+  font-size: 5rem;
+  margin-bottom: 80px;
+}
+
+.about-grid,
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.about-card,
+.member-card {
+  border: 2px solid white;
+  padding: 40px;
+  transition: 0.3s;
+}
+
+.about-card:hover,
+.member-card:hover {
+  background: #ff6b00;
+  color: black;
+  transform: translateY(-10px);
+}
+
+.slideshow-section {
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.slideshow-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+
+.slideshow-track img {
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.gallery-grid {
+  columns: 2;
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 2px solid white;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background: #ff6b00;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#music-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #ff6b00;
+  color: black;
+  font-size: 1.3rem;
+  z-index: 999;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 150px;
+  }
+
+  .hero-left h1 {
+    font-size: 4rem;
+  }
+
+  .about h2,
+  .gallery h2,
+  .members h2,
+  footer h2 {
+    font-size: 3rem;
+  }
+
+  .gallery-grid {
+    columns: 1;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
