@@ -69,7 +69,7 @@ document.body.addEventListener('click', async () => {
     try {
       await music.play();
       playing = true;
-      musicBtn.innerHTML = '🔇';
+      musicBtn.innerHTML = '🔊';
     } catch(err) {
       console.log(err);
     }
@@ -82,12 +82,12 @@ musicBtn.addEventListener('click', () => {
 
   if (playing) {
     music.pause();
-    musicBtn.innerHTML = '🔊';
+    musicBtn.innerHTML = '🔇';
     playing = false;
 
   } else {
     music.play();
-    musicBtn.innerHTML = '🔇';
+    musicBtn.innerHTML = '🔊';
     playing = true;
   }
 
@@ -142,3 +142,10 @@ lightbox.addEventListener('click', (e) => {
   }
 
 });
+
+// DISABLE CURSOR ON MOBILE
+
+if(window.innerWidth < 900){
+  document.querySelector('.cursor').style.display = 'none';
+  document.querySelector('.cursor-blur').style.display = 'none';
+}

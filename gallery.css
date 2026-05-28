@@ -94,3 +94,47 @@ nav a{
     opacity:1;
   }
 }
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width:900px){
+
+  .gallery-page{
+    padding:120px 6%;
+  }
+
+  .gallery-page h1{
+    font-size:3rem;
+    line-height:0.95;
+    margin-bottom:50px;
+  }
+
+  .gallery-grid{
+    columns:1;
+  }
+
+  .gallery-grid img{
+    margin-bottom:15px;
+  }
+
+  nav{
+    padding:20px 6%;
+  }
+
+  nav a{
+    font-size:0.9rem;
+  }
+
+  .close-lightbox{
+    top:20px;
+    right:25px;
+    font-size:3rem;
+  }
+
+  .lightbox img{
+    max-width:95%;
+    max-height:80vh;
+  }
+}
